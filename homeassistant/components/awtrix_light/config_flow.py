@@ -23,17 +23,22 @@ config_entry_flow.register_discovery_flow(DOMAIN, "Awtrix_Light", _async_has_dev
 
 
 class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+    VERSION = 1
+
+    async def is_valid(self, info):
+        return len(info["topic"]) > 0
+
     async def async_step_user(self, info):
         if info is not None:
-            pass  # TODO: process info
-
-        return self.async_show_form(
-            step_id="awtrixTopic",
-            data_schema=vol.Schema({vol.Required("MQTT topic"): str}),
-        )
-
-    async def async_step_awtrixTopic(self, info):
-        if info is not None:
-            print(info["MQTT topic"])
-
-            pass  # TODO: process info
+            print(info["topic"])
+            valid = await self.is_valid(info)
+            if valid:
+                return self.async_create_entry(
+                    title="awtrix MQTT topic",
+                    data={"topic": info["topic"]},
+                )
+        else:
+            return self.async_show_form(
+                step_id="user",
+                data_schema=vol.Schema({vol.Required("topic"): str}),
+            )
