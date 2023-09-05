@@ -1,0 +1,13 @@
+{
+  "domain": "awtrix_light",
+  "name": "Awtrix_Light",
+  "codeowners": ["@simonCor"],
+  "config_flow": true,
+  "dependencies": ["mqtt"],
+  "documentation": "https://www.home-assistant.io/integrations/awtrix_light",
+  "homekit": {},
+  "iot_class": "local_polling",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": []
+}

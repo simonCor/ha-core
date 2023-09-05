@@ -518,6 +518,12 @@
       "config_flow": true,
       "iot_class": "local_polling"
     },
+    "awtrix_light": {
+      "name": "Awtrix_Light",
+      "integration_type": "hub",
+      "config_flow": true,
+      "iot_class": "local_polling"
+    },
     "axis": {
       "name": "Axis",
       "integration_type": "device",

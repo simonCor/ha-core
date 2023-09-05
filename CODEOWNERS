@@ -128,6 +128,8 @@ build.json @home-assistant/supervisor
 /homeassistant/components/avea/ @pattyland
 /homeassistant/components/awair/ @ahayworth @danielsjf
 /tests/components/awair/ @ahayworth @danielsjf
+/homeassistant/components/awtrix_light/ @simonCor
+/tests/components/awtrix_light/ @simonCor
 /homeassistant/components/axis/ @Kane610
 /tests/components/axis/ @Kane610
 /homeassistant/components/azure_devops/ @timmo001

@@ -56,6 +56,7 @@ FLOWS = {
         "aurora_abb_powerone",
         "aussie_broadband",
         "awair",
+        "awtrix_light",
         "axis",
         "azure_devops",
         "azure_event_hub",
